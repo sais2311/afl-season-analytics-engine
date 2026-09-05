@@ -10,9 +10,12 @@ API integration, SQL + Python, cloud warehousing, and data-quality validation.
 
 ## Architecture
 
-Squiggle API  ->  Python (extract)  ->  Python (clean + validate)  ->  Snowflake  ->  SQL/Python analysis
-                                              |
-                                              +--> Data-quality checks + QA report
+```text
+Squiggle API  ->  Python         ->  Python             ->  Snowflake   ->  SQL / Python
+                  (extract)          (clean + validate)     (warehouse)     (5 analyses)
+                                         |
+                                         +--> Data-quality checks + QA report
+```
 
 ## The pipeline
 
