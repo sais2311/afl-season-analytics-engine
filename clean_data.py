@@ -7,7 +7,7 @@ with open("season_2026.json") as f:
 games = pd.DataFrame(data["games"])
 home_away = games[(games["is_final"] == 0) & (games["complete"] == 100)].copy()
 
-# Label each game's result explicitly, so a null 'winner' never breaks anything
+# Labeling each game's result explicitly, so no winner would ever break anything
 def result(row):
     if row["hscore"] > row["ascore"]:
         return "home"
