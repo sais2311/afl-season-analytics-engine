@@ -35,7 +35,7 @@ fig, ax = plt.subplots(figsize=(11, 8))
 ax.set_xlim(x_min, x_max)
 ax.set_ylim(y_max, y_min)   
 
-# Making the premiership zone: placing teams which havea a better-than-average attack AND defence
+# Making the premiership zone: placing teams which havea a better than average attack AND defence
 ax.add_patch(Rectangle((avg_attack, avg_defence), x_max - avg_attack, y_min - avg_defence,
                        color="green", alpha=0.08, zorder=0))
 
