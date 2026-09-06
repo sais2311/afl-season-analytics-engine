@@ -1,5 +1,6 @@
--- Contender Quadrant: attack vs defence coordinates for all 18 teams.
--- Plotted in Python (contender_quadrant.py); top-right zone = premiership profile.
+/*
+Contender Quadrant: attack vs defence coordinates for all 18 teams.
+*/
 
 WITH team_games AS (
     SELECT hteam AS team, hscore AS points_for, ascore AS points_against FROM AFL.PUBLIC.GAMES
