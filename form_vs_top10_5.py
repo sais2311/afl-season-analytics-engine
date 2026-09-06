@@ -5,7 +5,7 @@ from adjustText import adjust_text
 
 games = pd.read_csv("games_clean.csv")
 
-# Build the full-season ladder to identify the top 10 teams
+# Building the full season ladder to identify the top 10 teams
 rows = []
 for _, r in games.iterrows():
     hs, as_ = r["hscore"], r["ascore"]
@@ -18,7 +18,7 @@ lad["pct"] = lad["pf"] / lad["pa"] * 100
 lad = lad.sort_values(["pts","pct"], ascending=False).reset_index(drop=True)
 TOP10 = set(lad.head(10)["team"])
 
-#  last 10 rounds, ONLY counting games against top 10 teams 
+#  last 10 rounds, only counting games against top 10 teams 
 last_round = games["round"].max()
 window = games[games["round"] > last_round - 5].copy()
 
