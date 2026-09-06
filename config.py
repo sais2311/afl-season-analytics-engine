@@ -1,4 +1,4 @@
-# config.py — shared settings for the AFL Season Analytics Engine
+# config.py
 
 HEADERS = {
     "User-Agent": "AFL Season Engine - Sai Surapaneni - saisurapaneni49@gmail.com"
