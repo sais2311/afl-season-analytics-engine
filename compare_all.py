@@ -19,7 +19,7 @@ if n == 0:
 
 BG = "#0E1117"
 ncols = 3
-nrows = (n + 1 + ncols - 1) // ncols  # +1 leaves room for the analysis panel
+nrows = (n + 1 + ncols - 1) // ncols  
 
 fig, axes = plt.subplots(nrows, ncols, figsize=(ncols*6, nrows*4.6))
 fig.patch.set_facecolor(BG)
@@ -31,7 +31,7 @@ for ax, (fname, caption) in zip(axes, present):
     ax.imshow(mpimg.imread(fname))
     ax.set_title(caption, color="#FFFFFF", fontsize=12, fontweight="bold", pad=8)
 
-# --- Analysis panel in the next empty cell ---
+# Anlasying the panel
 panel = axes[n]
 panel.set_facecolor(BG)
 panel.add_patch(FancyBboxPatch((0.03, 0.03), 0.94, 0.94,
