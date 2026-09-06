@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from adjustText import adjust_text
 
-# --- Load the clean season and compute attack/defence in pandas (no warehouse needed) ---
+# Loading the clean data 
 games = pd.read_csv("games_clean.csv")
 home = games[["hteam", "hscore", "ascore"]].rename(columns={"hteam": "team", "hscore": "pf", "ascore": "pa"})
 away = games[["ateam", "ascore", "hscore"]].rename(columns={"ateam": "team", "ascore": "pf", "hscore": "pa"})
@@ -14,7 +14,7 @@ avg_attack = stats["attack"].mean()
 avg_defence = stats["defence"].mean()
 stats["zone"] = (stats["attack"] > avg_attack) & (stats["defence"] < avg_defence)
 
-# Team colours chosen to read on a dark background
+# The team colours
 COLOURS = {
     "Adelaide": "#E21937", "Brisbane Lions": "#C0143C", "Carlton": "#2C5AA0",
     "Collingwood": "#FFFFFF", "Essendon": "#E4002B", "Fremantle": "#A265D0",
@@ -34,9 +34,9 @@ xp, yp = 4, 4
 x_min, x_max = stats["attack"].min()-xp, stats["attack"].max()+xp
 y_min, y_max = stats["defence"].min()-yp, stats["defence"].max()+yp
 ax.set_xlim(x_min, x_max)
-ax.set_ylim(y_max, y_min)  # invert so better defence sits at the top
+ax.set_ylim(y_max, y_min)  
 
-# Premiership zone shading (top-right)
+# Premiership zone shading 
 ax.add_patch(Rectangle((avg_attack, avg_defence), x_max-avg_attack, y_min-avg_defence,
                        facecolor="#1DB954", alpha=0.08, edgecolor="none", zorder=0))
 ax.axvline(avg_attack, color="#3A3F4B", lw=1, ls="--", zorder=1)
