@@ -38,6 +38,68 @@ Squiggle API  ->  Python         ->  Python             ->  Snowflake   ->  SQL 
 | 4 | Strength of Schedule | Who had the easy draw vs the brutal one |
 | 5 | Season Form | 5-game rolling form — who surged, who faded into finals |
 
+## Key findings (2026 home-and-away season)
+
+Five analyses, one story: who was actually best, why they were good, who had it
+easy or hard, and who was peaking at the right time. The recurring theme — the
+ladder hides things a margin-based, opponent-adjusted view brings out.
+
+### 1. Power Ranking — the ladder and the "best team" aren't the same
+- **Sydney rated #1** on opponent-adjusted margin (**+27.8**), ahead of **Fremantle
+  (+26.1)** — even though Fremantle won the minor premiership. Sydney was the more
+  *dominant* team; Fremantle won more games. That gap is the whole point of a power
+  ranking.
+- **Geelong is the ladder's most underrated side:** 5th on the ladder, but **3rd** on
+  the adjusted rating — they combined strong margins with a slightly harder-than-average
+  draw.
+- **Hawthorn is the mirror image:** 4th on the ladder, **5th** on the rating. Their
+  percentage (120.1) actually trailed 5th-placed Geelong's (122.3), and they drew twice —
+  signs of a team that won more games than their margins alone "deserved."
+
+### 2. Strength of Schedule — not everyone played the same season
+- **Western Bulldogs faced the hardest draw in the league (+4.4);** **Hawthorn the
+  easiest (−2.3).**
+- Adjusting for it flips the story on the Dogs: a below-average raw margin (**−4.0**)
+  becomes **above the line (+0.4)** once you account for the schedule — a genuinely
+  better side than 8th suggests.
+- This is the single clearest example of why raw win/loss records mislead: two teams
+  with the same record did not play the same season.
+
+### 3. Offence/Defence Split — *why* teams were good, not just that they were
+- **Fremantle won the minor premiership on defence:** **#1 defence** (72.4 conceded)
+  but only **5th attack**. A side that suffocated opponents rather than outscoring them.
+- **Brisbane were the opposite:** **#2 attack** (108.7) but **11th defence** (89.3) —
+  elite firepower without a finals-grade defence.
+- **Sydney were the only genuinely complete team:** **#1 attack and #3 defence**.
+- **Adelaide were the quiet achiever:** a modest **7th attack** but **#2 defence** — a
+  stingy side that flew under the radar.
+
+### 4. Contender Quadrant — five teams with the premiership profile
+- **Above average at both ends (the top-right zone):** Sydney, Fremantle, Adelaide,
+  Hawthorn, Geelong.
+- **Brisbane were the only high-scoring side to miss the zone** — elite attack dragged
+  down by a leaky defence. Historically, that defensive gap is a finals problem.
+- **Sydney sit furthest into the top-right** — the most complete profile in the league.
+
+### 5. Season Form — who was peaking at the right time
+- **Hawthorn were the 2nd-hottest team over the final five rounds**, surging into
+  September — form that showed up when they beat Fremantle away in the first week of finals.
+- **Carlton (+46) and Geelong (+40) were the season's biggest improvers**, both climbing
+  hard down the stretch.
+- **Gold Coast were the collapse of the year:** they started like contenders and faded
+  badly — roughly a **−68 swing** in rolling form from early season to late.
+- **The Western Bulldogs were actually *fading* into finals** — which, paired with their
+  hardest-in-the-league draw, tells a nuanced story: a genuinely good side by the numbers,
+  but not one in hot form.
+
+### A note on limitations (because honesty matters)
+- **The quadrant axes are raw, not opponent-adjusted.** A team from an easy draw looks
+  better than it is. Opponent-adjusting the axes (using the strength-of-schedule numbers
+  already computed) is the obvious next version.
+- **These ratings measure full-season performance.** They can't account for finals
+  availability — injuries, suspensions, late changes. That's where human judgment has to
+  layer on top of the numbers, and it's why a model is a tool, not an oracle.
+
 ## Data quality
 
 Validation is a first-class step, not an afterthought. Checks run before any data
