@@ -1,5 +1,7 @@
--- Offence/Defence Split: rank teams separately on attack (points scored)
--- and defence (points conceded). Reveals WHY teams were good.
+/*
+Offence/Defence: ranking teams separately on how much points scored
+and how many points scored aganist
+*/
 
 WITH team_games AS (
     SELECT hteam AS team, hscore AS points_for, ascore AS points_against FROM AFL.PUBLIC.GAMES
