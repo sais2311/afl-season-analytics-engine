@@ -22,6 +22,6 @@ print("Result breakdown:")
 print(home_away["result"].value_counts())
 print("-" * 40)
 
-# Save the clean, analysis-ready dataset
+# Saving the file, so the data can be ready for analysis
 home_away.to_csv("games_clean.csv", index=False)
 print(f"Saved {len(home_away)} clean games to games_clean.csv")
