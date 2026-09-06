@@ -5,7 +5,7 @@ from adjustText import adjust_text
 
 games = pd.read_csv("games_clean.csv")
 
-# the last 10 rounds of the home-and-away season to see who is in the form
+# To see which team is in form for the last 10 rounds of the home and away season
 last_round = games["round"].max()
 window = games[games["round"] > last_round - 10].copy()
 n_rounds = window["round"].nunique()
