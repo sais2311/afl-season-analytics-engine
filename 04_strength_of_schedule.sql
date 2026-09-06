@@ -1,6 +1,6 @@
--- Strength of Schedule: average rating of each team's opponents.
--- Positive = harder-than-average draw; negative = easier.
--- (Derived from the same base ratings as the power ranking.)
+/*
+Average rating of each team's opponents.
+*/
 
 WITH team_games AS (
     SELECT hteam AS team, ateam AS opponent, hscore - ascore AS margin FROM AFL.PUBLIC.GAMES
