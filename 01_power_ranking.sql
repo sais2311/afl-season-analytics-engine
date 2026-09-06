@@ -1,6 +1,8 @@
--- Power Ranking: opponent-adjusted margin rating
--- Base rating = avg margin per team; adjusted by strength of opponents faced.
--- Also yields Strength of Schedule (the avg opponent rating).
+/*
+Power Ranking
+Base rating 
+Strength of Schedule (the avg opponent rating).
+*/
 
 WITH team_games AS (
     SELECT hteam AS team, ateam AS opponent, hscore - ascore AS margin FROM AFL.PUBLIC.GAMES
